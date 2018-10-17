@@ -85,6 +85,7 @@ public class LambdaTest {
     public static void functionInterface2(MyInter2 myInter2){
         myInter2.dummy1();
         myInter2.dummy2();
+        MyInter2.dummy3();
     }
 
     static Integer compute(int value, IntFunction<Integer> function){
@@ -97,6 +98,7 @@ public class LambdaTest {
 
 interface MyInter1{
     String dummy1(String name);
+    boolean equals(Object object);
 }
 
 interface MyInter2{
@@ -104,5 +106,7 @@ interface MyInter2{
     default void dummy2(){
         System.out.println("default method for dummy2");
     }
+    static void dummy3(){
+        System.out.println("static method for dummy3");
+    }
 }
-
