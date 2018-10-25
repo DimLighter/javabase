@@ -8,7 +8,7 @@
 <configuration debug="false" scan="true" scanPeriod="3000 milliseconds" packagingData="true">
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%d{HH:mm:ss.SSS} [%-5thread] %-5level %logger{36} - %msg%n</pattern>
+            <pattern>%d{HH:mm:ss.SSS} [%-5thread] %-5level %logger{36} %method:%line - %msg%n</pattern>
         </encoder>
     </appender>
 
@@ -20,7 +20,7 @@
         </rollingPolicy>
 
         <encoder>
-            <pattern>%d{HH:mm:ss.SSS}[%-5level][%thread]%logger{36} - %msg%n</pattern>
+            <pattern>%d{HH:mm:ss.SSS}[%-5level][%thread]%logger{36} - %method:%line %msg%n</pattern>
         </encoder>
     </appender>
 
